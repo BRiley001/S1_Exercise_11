@@ -38,11 +38,11 @@ function runClock() {
     /* Display the time left until New Year's Eve */
     document.getElementById("days").textContent = Math.floor(daysLeft);
 
-    /* Calculate the hours left in the current day */
+    /* Calculate the hours left in the current day by using the day variable */
     var hrsLeft = (daysLeft - Math.floor(daysLeft)) * 24;
     document.getElementById("hrs").textContent = Math.floor(hrsLeft);
 
-    /* Calculate the minutes and seconds left in the current hour */
+    /* This calculates the minutes and seconds left by using the variable above it, subtracting the floor of it, then multiplying it correctly */
     var minsLeft = (hrsLeft - Math.floor(hrsLeft)) * 60;
     var secsLeft = (minsLeft - Math.floor(minsLeft)) * 60;
     document.getElementById("mins").textContent = Math.floor(minsLeft);
